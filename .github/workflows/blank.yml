@@ -25,7 +25,7 @@ env:
 
 jobs:
   export-from-dev:
-    name: BUILD 🛠
+    name: BUILD 🔨
     runs-on: windows-latest
     environment: 
       name: DEV
