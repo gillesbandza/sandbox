@@ -70,7 +70,7 @@ jobs:
           echo "That's Good !"
 
   process:
-    name: deploying-to-prod🚀
+    name: DEPLOYING-to-PROD 🚀
     needs: [ release-to-staging ]
     runs-on: windows-latest
     environment: 
