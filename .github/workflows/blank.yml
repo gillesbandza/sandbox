@@ -69,7 +69,8 @@ jobs:
         run: |
           echo "That's Good !"
 
-  deploying-to-prod:
+  process:
+    name: deploying-to-prod🚀
     needs: [ release-to-staging ]
     runs-on: windows-latest
     environment: 
