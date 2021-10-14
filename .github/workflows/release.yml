@@ -1,0 +1,23 @@
+name: Build Docker Images
+on: workflow_dispatch
+
+jobs:
+  build:
+    name: RedisTimeSeries
+    runs-on: ubuntu-latest
+    steps:
+      - id: keydb
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          owner: gillesbandza
+          repo: powerplatform_ci
+          excludes: prerelease, draft
+      - id: timeseries
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: RedisTimeSeries/RedisTimeSeries
+      - uses: actions/checkout@v2
+      - name: print if more than 2 approve
+        run: echo ${{ steps.keydb.outputs.release }}
+      - name: print if more than 2 approve
+        run: echo ${{ steps.timeseries.outputs.release }}
