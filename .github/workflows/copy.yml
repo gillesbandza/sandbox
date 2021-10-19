@@ -1,8 +1,8 @@
-name copy
+name: copy
 on:
   workflow_dispatch:
   
-  jobs:
+jobs:
     copy:
 
       runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
