@@ -1,16 +1,20 @@
-jobs:
-  copy:
+name copy
+on:
+  workflow_dispatch:
+  
+  jobs:
+    copy:
 
-    runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
+      runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
 
-    steps:
-    - name: Copy environment
-      uses: microsoft/powerplatform-actions/copy-environment@v0
-      with:
-	source-url: 'https://rtekiwidev.crm4.dynamics.com'
-	target-url: 'https://rtekiwidevint.crm4.dynamics.com'
-	user-name: 'gilles.bandza_ibm@rtefrance.onmicrosoft.com'
-	password-secret: 'Pass@wordRTE22!'
-	#app-id:
-	#client-secret:
-	#tenant-id:
+      steps:
+      - name: Copy environment
+        uses: microsoft/powerplatform-actions/copy-environment@v0
+        with:
+          source-url: 'https://rtekiwidev.crm4.dynamics.com'
+          target-url: 'https://rtekiwidevint.crm4.dynamics.com'
+          user-name: 'gilles.bandza_ibm@rtefrance.onmicrosoft.com'
+          password-secret: 'Pass@wordRTE22!'
+          #app-id:
+          #client-secret:
+          #tenant-id:
