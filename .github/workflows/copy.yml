@@ -12,6 +12,6 @@ jobs:
         source-url: 'https://rtekiwidev.crm4.dynamics.com'
         target-url: 'https://rtekiwidevint.crm4.dynamics.com'
         user-name: 'gilles.bandza_ibm@rtefrance.onmicrosoft.com'
-        password-secret: 'Pass@wordRTE22!'
+        password-secret: ${{ secrets.password }}
 
 
